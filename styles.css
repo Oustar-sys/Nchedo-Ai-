@@ -1,0 +1,33 @@
+/* Custom Variable Layout definitions mapped via Tailwind */
+:root {
+    --brand-dark: #0B0F19;
+        --brand-card: #161F30;
+            --brand-accent: #3B82F6;
+                --brand-purple: #8B5CF6;
+                    --brand-glow: #00F2FE;
+                    }
+
+                    /* Tailwind configuration extensions injected natively into runtime utility rules */
+                    @layer utilities {
+                        .bg-brand-dark { background-color: var(--brand-dark); }
+                            .bg-brand-card { background-color: var(--brand-card); }
+                                .text-brand-glow { color: var(--brand-glow); }
+                                    .text-brand-accent { color: var(--brand-accent); }
+                                        .text-brand-purple { color: var(--brand-purple); }
+                                            .border-brand-accent { border-color: var(--brand-accent); }
+                                                .from-brand-accent { --tw-gradient-from: var(--brand-accent) /* var(--tw-gradient-from-position) */; --tw-gradient-to: rgb(59 130 246 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+                                                    .to-brand-purple { --tw-gradient-to: var(--brand-purple) /* var(--tw-gradient-to-position) */; }
+                                                    }
+
+                                                    /* UI Typography & Background Gradients */
+                                                    .gradient-text {
+                                                        background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-purple) 50%, var(--brand-glow) 100%);
+                                                            -webkit-background-clip: text;
+                                                                -webkit-text-fill-color: transparent;
+                                                                }
+
+                                                                /* Cyber Glow Hover Effects */
+                                                                .glow-effect:hover {
+                                                                    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+                                                                    }
+                                                                    
